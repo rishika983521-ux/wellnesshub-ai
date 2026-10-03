@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellnessHub AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Wellness<span>Hub</span> AI</div>
+
+    <div class="header-right">
+        <span id="date"></span>
+        <button onclick="toggleTheme()" class="theme">🌙</button>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <p class="tag">AI-POWERED WELLNESS</p>
+        <h1>Take care of yourself,<br><span>one day at a time.</span></h1>
+        <p>Track your habits, understand your progress and get personalized wellness insights.</p>
+    </section>
+
+    <section class="stats">
+
+        <div class="score">
+            <p>WELLNESS SCORE</p>
+            <strong id="score">0%</strong>
+            <small id="scoreText">Start tracking your day</small>
+        </div>
+
+        <div class="stat">
+            <div>💧</div>
+            <p>Water</p>
+            <strong><span id="waterDisplay">0</span>/8 glasses</strong>
+            <div class="bar"><i id="waterBar"></i></div>
+        </div>
+
+        <div class="stat">
+            <div>😴</div>
+            <p>Sleep</p>
+            <strong><span id="sleepDisplay">0</span>/8 hours</strong>
+            <div class="bar"><i id="sleepBar"></i></div>
+        </div>
+
+    </section>
+
+    <section class="ai">
+
+        <div class="ai-title">
+            <div class="robot">🤖</div>
+            <div>
+                <p class="tag">WELLNESS AI</p>
+                <h2>Personal Wellness Assistant</h2>
+            </div>
+        </div>
+
+        <div id="aiMessage" class="message">
+            Enter your daily information below and I'll analyze your progress.
+        </div>
+
+        <button onclick="generateInsight()" class="ai-button">
+            ✨ Generate AI Insight
+        </button>
+
+    </section>
+
+    <section class="card">
+
+        <p class="tag">DAILY TRACKER</p>
+        <h2>How was your day?</h2>
+
+        <div class="grid">
+
+            <div class="input">
+                <label>💧 Water Intake</label>
+                <small>Glasses of water</small>
+                <input id="water" type="number" min="0" max="30" placeholder="Example: 6">
+            </div>
+
+            <div class="input">
+                <label>😴 Sleep</label>
+                <small>Hours of sleep</small>
+                <input id="sleep" type="number" min="0" max="24" step="0.5" placeholder="Example: 8">
+            </div>
+
+            <div class="input">
+                <label>🏃 Activity</label>
+                <small>Did you exercise?</small>
+                <select id="exercise">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label>😊 Mood</label>
+                <small>How are you feeling?</small>
+                <select id="mood">
+                    <option>Happy</option>
+                    <option>Good</option>
+                    <option>Okay</option>
+                    <option>Tired</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button onclick="saveData()" class="save">Save Today's Progress</button>
+            <button onclick="resetData()" class="reset">Reset</button>
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <p class="tag">YOUR PROGRESS</p>
+        <h2>Wellness Summary</h2>
+
+        <div id="summary" class="summary">
+            Save your data to see your progress.
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <p class="tag">ACHIEVEMENTS</p>
+        <h2>Your Milestones</h2>
+
+        <div class="achievements">
+
+            <div id="badge1" class="badge">
+                💧
+                <strong>Hydration Hero</strong>
+                <small>Drink 8 glasses</small>
+            </div>
+
+            <div id="badge2" class="badge">
+                😴
+                <strong>Sleep Champion</strong>
+                <small>Sleep 8 hours</small>
+            </div>
+
+            <div id="badge3" class="badge">
+                🏃
+                <strong>Active Day</strong>
+                <small>Exercise today</small>
+            </div>
+
+            <div id="badge4" class="badge">
+                🏆
+                <strong>Wellness Pro</strong>
+                <small>Score 100%</small>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <strong>WellnessHub AI</strong>
+    <p>Built by Rishika Tirkey</p>
+    <small>Wellness habit tracking and educational purposes only.</small>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
